@@ -4,30 +4,39 @@
     <meta charset="utf-8">
     <title>正则表达式</title>
     <script type="text/javascript">
-      var pattern = /Box/i;
-      var str = 'This is a box';
-      alert(pattern.test(str));
+      var pattern = /box/i;
+      var str = 'This is a Box';
+      alert(pattern.exec(str));
+
     </script>
 
   </head>
     <body>
         var box = new RegExp('Box','ig');
-        alert(box);
+        alert(box);<br>
 
         var pattern = new RegExp('Box','i');//区分大小写
         var str = 'box';
         alert(pattern.test(str));//true
 
-
+        <br>
         alert(/Box/i.test('box'));//true 一句话匹配
+        <br>
 
         var pattern = /Box/i;    //使用字面量的方式
         var Str = 'box';
         alert(pattern.test(str));//true
+        <br>
 
         var str1 ='box';
         var str2 = 'box';
         alert(str2 == str1)    //字符串的匹配比较方式
+        <br>
+        var pattern = /Box/i;    //不区分大小写匹配
+        var str = 'This is a box';//一句英文
+        alert(pattern.test(str));//通过test方法验证是否匹配
+        <br>
+
 
     </body>
 </html>
