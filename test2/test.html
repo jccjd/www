@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>正则表达式</title>
     <script type="text/javascript">
-      var pattern = /box/i;
-      var str = 'This is a Box';
-      alert(pattern.exec(str));
+
 
     </script>
 
@@ -36,7 +34,10 @@
         var str = 'This is a box';//一句英文
         alert(pattern.test(str));//通过test方法验证是否匹配
         <br>
-
+        var pattern = /box/i;
+        var str = 'This is a Box';
+        alert(typeof pattern.exec(str));//返回的是数组
+        <br>
 
     </body>
 </html>
