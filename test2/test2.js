@@ -2,6 +2,7 @@
 var pattern = / /ig;
 var str = 'This is a Box!, That is a Box too';
 alert(str.split(pattern));
+alert(str.split(pattern).length);
 
 
 

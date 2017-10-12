@@ -1,9 +1,9 @@
-<?php
+1<?php
 	if ($_COOKIE['username']) {
 		# code...
 		echo "欢迎{$_COOKIE['username']}登录|<a href = 'delck.php'>退出</a>";
 	} else {
-		
+
 		# code...
 		header("location:index.php");
 
