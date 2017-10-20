@@ -1,8 +1,9 @@
-/*使用split拆分字符串数组*/
-var pattern = / /ig;
-var str = 'This is a Box!, That is a Box too';
-alert(str.split(pattern));
-alert(str.split(pattern).length);
+
+var pattern = /google/gi;
+
+alert(pattern.ignoreCase);//是否忽略大小写 
+alert(pattern.global);//true是否全局了
+
 
 
 
@@ -33,3 +34,20 @@ alert(str.split(pattern).length);
 // var pattern = /Box/ig;
 // var str = 'This is a Box, That is a Box too';
 // alert(str.replace(pattern, 'Tom'));//返回的是修改后的字符串
+
+/*使用split拆分字符串数组*/
+// var pattern = / /ig;
+// var str = 'This is a Box!, That is a Box too';
+// alert(str.split(pattern));
+// alert(str.split(pattern).length);
+
+// var patten = /google/i;
+// var str = 'This is google !';
+// patten.test(str);
+// alert(RegExp.input);
+// alert(RegExp.leftContext);
+// alert(RegExp.rightContext);
+// alert(RegExp.nightContext);
+// alert(RegExp.lastMatgh);
+// alert(RegExp.multiline);
+// alert(RegExp.lastParen);
