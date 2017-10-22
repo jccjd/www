@@ -1,8 +1,15 @@
 
-var pattern = /google/gi;
+var pattern = /google/gim;
+var str = 'google google google';
 
-alert(pattern.ignoreCase);//是否忽略大小写 
-alert(pattern.global);//true是否全局了
+// alert(pattern.ignoreCase);//是否忽略大小写
+// alert(pattern.global);//true是否全局了
+// alert(pattern.multiline);//是否支持换行
+// alert(pattern.lastIndex);//下次匹配的位置
+// alert(pattern.source);//正则表达式的源字符串
+// pattern.test(str);
+alert(pattern.lastIndex);
+// alert(pattern.unicode);
 
 
 
@@ -15,7 +22,7 @@ alert(pattern.global);//true是否全局了
 // var str = 'This is a Box! That is a Box!';
 // alert(typeof str.match(pattern));//匹配到第一个字符串返回数组
 //
-//
+
 // var pattern = /Box/i;     //没有开启全局
 // var str = 'This is a box! That is a Box!';
 // var a =  str.match(pattern);//匹配到第一个字符串返回数组
