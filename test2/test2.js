@@ -7,12 +7,10 @@ var str = 'google google google';
 // alert(pattern.multiline);//是否支持换行
 // alert(pattern.lastIndex);//下次匹配的位置
 // alert(pattern.source);//正则表达式的源字符串
-// pattern.test(str);
+pattern.test(str);
+pattern.test(str);
+pattern.lastIndex = 100;
 alert(pattern.lastIndex);
-// alert(pattern.unicode);
-
-
-
 
 // var pattern = /Box/i;
 // var str = 'boxss';
