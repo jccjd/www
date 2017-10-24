@@ -1,6 +1,7 @@
 
-var pattern = /google/gim;
-var str = 'google google google';
+
+// var pattern = /google/gim;
+// var str = 'google google google';
 
 // alert(pattern.ignoreCase);//是否忽略大小写
 // alert(pattern.global);//true是否全局了
@@ -8,11 +9,11 @@ var str = 'google google google';
 // alert(pattern.lastIndex);//下次匹配的位置
 // alert(pattern.source);//正则表达式的源字符串
 // pattern.test(str);
-alert(pattern.lastIndex);
-// alert(pattern.unicode);
-
-
-
+// pattern.test(str);
+// pattern.lastIndex = 100;
+// alert(pattern.lastIndex);
+// alert(pattern.lastIndex);
+// alert(pattern.lastIndex);
 
 // var pattern = /Box/i;
 // var str = 'boxss';
