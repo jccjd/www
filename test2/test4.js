@@ -10,5 +10,5 @@ alert(pattern.test(str));
 var pattern = /google\b/;//\b可以匹配是否到了边界
 var str = 'googlesd';
 alert(pattern.test(str));
-alert(pattern.test(str))
+alert(pattern.test(str));
 alert(pattern.test(str));

@@ -59,12 +59,9 @@ var pattern = /^google$/;//多余的字符不能匹配 ^强制首匹配，$强�
 var str = 'google';
 alert(pattern.test(str));
 
-*/
 var pattern = /^google$/;
 var str = 'google';
-=======
 */
 var pattern = /[^0-9]oogle/;//[a-z]表示26个小写字母，任意一个都可以匹配
 var str = '4oogle';
->>>>>>> origin/master
 alert(pattern.test(str));
