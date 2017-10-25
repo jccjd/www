@@ -23,6 +23,7 @@ var pattern = /[a-z]oogle/;//[a-z]表示26个小写字母，任意一个都可�
 var str = 'google';
 alert(pattern.test(str));
 
+<<<<<<< HEAD
 var pattern = /[^0-9]oogle/;//[^0-9]表示非0-9的任意字符，任意一个都可以匹配
 var str = '4oogle';
 alert(pattern.test(str));
@@ -61,4 +62,9 @@ alert(pattern.test(str));
 */
 var pattern = /^google$/;
 var str = 'google';
+=======
+*/
+var pattern = /[^0-9]oogle/;//[a-z]表示26个小写字母，任意一个都可以匹配
+var str = '4oogle';
+>>>>>>> origin/master
 alert(pattern.test(str));
