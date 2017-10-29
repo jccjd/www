@@ -1,32 +1,162 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>test</title>
-	</head>
-	<body>
-	<form class="" action="" name="form1"  method="post">
-		<input type="text" name="textfield" value="javascript">
-				<select class="" name="menul1"onChange="Fcolor()">
-					<option value="yellow">黄</option>
-					<option value="black">黑</option>
-					<option value="blue">蓝</option>
-					<option value="green">绿</option>
-					<option value="red">红</option>
-					<option value="purple">紫</option>
-
-		</select>
-	</form>
+	<meta charset="utf-8">
+	<title>test</title>
+</head>
+<body>
+鼠标按下或松开事件
+<p id="p1" style="color:#11ecb7" onmousedown="mousedown()" onmouseup="mouseup()"><u>编程词典网</u></p>
 	<script type="text/javascript">
-		function Fcolor() {
+		function mousedown(event) {
 			var e = window.event;
 			var obj = e.srcElement;
-			form1.textfield.style.color = obj.options[obj.selectedIndex].value;
+			obj.style.color = "#e0d421";
+
+		}
+		function mouseup(event) {
+			var e = window.event;
+			var obj = e.srcElement;
+			obj.style.color = '#a265a4';
+			window.open("", "编程词典网","");
 		}
 	</script>
-	</body>
+</body>
+
 </html>
 <!--
+<form action="" name="form1"  method="post">
+	<input type="button" name="Submit" value="变换背景" onclick="turnColor()">
+</form>
+<p>用按钮随意变换背景颜色。</p>
+鼠标键盘事件
+鼠标的点击事件
+<script type="text/javascript">
+var Arraycolor = new Array("olive","teal","red","blue","maroon","navy","lime",
+"fuschia","green","purple","gray","yellow","aqua","white","silver");
+var n = 0;
+function turnColor() {
+	if (n == (Arraycolor.length - 1)) n = 0;
+
+	n ++;
+	document.bgColor = Arraycolor[n];
+
+}
+
+</script>
+
+表单提交与重置事件
+<table width="487" height="333" border="0" align="center" cellpadding="0" cellspacing="0" >
+	<tr>
+		<td align="center" valign="top" >
+			<br><br><br><br><br>
+			<table width="86%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#6699cc">
+				<form  action="" name="form1" onReset="return AllReset()" onsubmit="return AllSubmit()" method="post">
+					<tr bgcolor="#200829">
+						<td height="22" align="right">所属类别:</td>
+						<td height="22" align="left">
+							<select name="txt1" id="txt1">
+								<option value="数码电器">数码电器</option>
+								<option value="家用电器">家用电器</option>
+								<option value="礼品工艺">礼品工艺</option>
+							</select>
+							<select name="txt2" id="txt2">
+								<option value="数码相机">数码相机</option>
+								<option value="打印机">打印机</option>
+							</select>
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="22" align="reght">商品名称</td>
+						<td height="22" align="left" >
+							<input type="text" id="txt3" size="30" name="txt3" maxlength="50">
+						</td>
+
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="22" align="right">会员价:</td>
+						<td height="22" align="left">
+							<input type="text" name="txt4" id="tx4" size="10">
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="22" align="right">提供商</td>
+						<td height="22" align="left">
+							<input type="text" name="txt5" id="txt5" size="30" maxlength="50">
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="22" align="right">商品简介:</td>
+						<td height="22" align="left" >
+							<textarea name="txt6" cols="35" rows="4" id="txt6"></textarea>
+						</td>
+					</tr>
+
+					<tr bgcolor="#ffffff">
+						<td height="22" align="right" >商品数量</td>
+						<td height="22" align="left">
+							<input type="text" name="txt7" id="txt7" size="10" >
+						</td>
+					</tr>
+					<tr bgcolor="#ffffff">
+						<td height="22" colspan="2" align="center" >
+							<input type="submit" name="sub" id="sub2" value="提交">
+							&nbsp;
+							<input type="reset" name="Submit2" value="重置">
+						</td>
+					</tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function AllReset() {
+		// body...
+		if (window.confirm("是否进行重置"))
+			return true;
+		else
+			return false;
+
+}
+	function AllSubmit() {
+		// body...
+		var T = true;
+		var e = window.event;
+		var obj = e.srcElement;
+		for (var i = 1; i <= 7; i++) {
+			if (eval("obj."+"txt"+i).value=="") {
+				T = false;
+				break;
+			}
+		}
+		if (!T) {
+			alert("提交内容不能为空");
+		}
+		return T;
+}
+</script>
+
+失去焦点修改事件
+<form class="" action="" name="form1"  method="post">
+	<input type="text" name="textfield" value="javascript">
+			<select class="" name="menul1"onChange="Fcolor()">
+				<option value="yellow">黄</option>
+				<option value="black">黑</option>
+				<option value="blue">蓝</option>
+				<option value="green">绿</option>
+				<option value="red">红</option>
+				<option value="purple">紫</option>
+
+	</select>
+</form>
+<script type="text/javascript">
+	function Fcolor() {
+		var e = window.event;
+		var obj = e.srcElement;
+		form1.textfield.style.color = obj.options[obj.selectedIndex].value;
+	}
+</script>
 	<input type="button" name="bt_save" value="保存" id="save">
 
 	<script type="text/javascript">
