@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+	</head>
+	<body>
+	<form class="" action="" name="form1"  method="post">
+		<input type="text" name="textfield" value="javascript">
+				<select class="" name="menul1"onChange="Fcolor()">
+					<option value="yellow">黄</option>
+					<option value="black">黑</option>
+					<option value="blue">蓝</option>
+					<option value="green">绿</option>
+					<option value="red">红</option>
+					<option value="purple">紫</option>
+
+		</select>
+	</form>
+	<script type="text/javascript">
+		function Fcolor() {
+			var e = window.event;
+			var obj = e.srcElement;
+			form1.textfield.style.color = obj.options[obj.selectedIndex].value;
+		}
+	</script>
+	</body>
+</html>
+<!--
+	<input type="button" name="bt_save" value="保存" id="save">
+
+	<script type="text/javascript">
+		var bt_save = document.getElementById("save");
+		bt_save.onclick = function() {
+		alert("单击了保存按钮");
+	}
+-->
+<!--
+事件处理程序的调用
+<input type="button" name="bt_save" onclick="clickFunction();" id="save" value="保存">
+<script type="text/javascript">
+	function clickFunction() {
+		alert("单击了保存按钮//");
+	}
+</script>
+-->
+<!--
+事件对象
+<script type="text/javascript">
+	function() handle(oEvent){
+		if (window.event) oEvent = window.event;
+		var oTarget;
+		if (oEvent.srcElement)
+			oTarget = oEvent.srcElement;
+		else
+			oTarget = oEvent.target;
+
+	}
+	window.onload = function() {
+		var oImg = document.getElementsByTagName("img")[0];
+		oImg.onclick = handle;
+
+	}
+
+
+</script>
+
+获得焦点与失去焦点事件
+<table align="center" width="337" height="204" border="0">
+	<tr>
+		<td width="108">用户名:</td>
+		<td width="213">
+			<form name="form1" method="post" action="">
+				<input type="text" name="textfield" onfocus="txtfocus()" onBlur="txtblur()">
+			</form>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+
+	function txtfocus(event) {
+		var e = window.event;
+		var obj = e.srcElement;
+		var.style.background = "#ffff66";
+
+	}
+
+	function txtblur(event) {
+		var e = window.event;
+		var obj = e.srcElement;
+		obj.style.background = "#ffffff";
+	}
+</script>
+
+ 获得焦点与失去焦点事件
+<table align="center" width="337" height="204" border="0">
+	<tr>
+		<td width="108">用户名:</td>
+		<td width="213">
+			<form name="form1" method="post" action="">
+				<input type="text" name="textfield" onfocus="txtfocus()" onBlur="txtblur()">
+			</form>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+
+	function txtfocus(event) {
+		var e = window.event;
+		var obj = e.srcElement;
+		obj.style.background = "#ffff66";
+
+	}
+
+	function txtblur(event) {
+		var e = window.event;
+		var obj = e.srcElement;
+		obj.style.background = "#ffffff";
+	}
+</script>
+<body>
+</html>
+-->
